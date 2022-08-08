@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 8080;
+const run = require('./Controller/Config/config');
+
 
 app.get('/', (req, res) => {
     res.send("hello world!");
