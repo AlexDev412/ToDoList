@@ -10,7 +10,11 @@ const userSchema = Schema({
     password:{
         type: String,
         required : true,
-    } 
+    },
+    uuid: {
+        type: String,
+        default: '',
+    }
 });
 
 const Users = mongoose.model('Users', userSchema);

@@ -19,12 +19,14 @@ const { connectToDB } = require('./Config/config');
 
 /////Authentication///////////
 const { register } = require('./Controller/Authentifcation/Register/register');
+const { login } = require('./Controller/Authentifcation/Login/login');
 ////////////////////////////////
 
 connectToDB();
 
 /////Authentication///////////
 register(app);
+login(app);
 ////////////////////////////////
 app.listen(port, () => {
     console.log("server listening on port " + port);
