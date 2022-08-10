@@ -1,5 +1,6 @@
 import React from 'react';
 import FormRegister from "./component/index";
+import RegisterController from "./register.controller";
 
 class RegisterComponent extends React.Component {
     state =  {
@@ -18,7 +19,9 @@ class RegisterComponent extends React.Component {
 
     handleClick = () => {
         console.log(this.state.username, this.state.password);
+        RegisterController(this.state.username, this.state.password);
     }
+
     render() {
         return (
             <FormRegister 
