@@ -1,9 +1,10 @@
 import { AxiosResponse, AxiosError } from "axios";
 const axios  = require('axios');
 
-const  RegisterController  = async (username: string, password: string) => {
+const RegisterController  = async (username: string, password: string) => {
+    var response = null;
     try {
-        await axios.post('http://127.0.0.1:8080/register',
+        response = await axios.post('http://127.0.0.1:8080/register',
         {username: username, password: password},
         {
             headers: {
@@ -12,16 +13,16 @@ const  RegisterController  = async (username: string, password: string) => {
             },
         },)
         .then((response : AxiosResponse<any, any>) => {
-            console.log(response.data);
-            //change route here
+            return (response);
         })
         .catch((error : AxiosError<any, any>) => {
-            alert(error.response?.data.msg)
-            console.log(error.response?.data.msg)
+            response = error.response;
+            return (error.response?.data);
         })
-    } catch (err) {
-        console.log(err)
-    }
+    } catch (error) {
+            console.log(error);
+        }
+    return (response);
 }
 
 export default RegisterController;

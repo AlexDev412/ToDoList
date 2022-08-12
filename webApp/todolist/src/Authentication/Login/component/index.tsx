@@ -4,18 +4,16 @@ import Form from 'react-bootstrap/Form';
 interface IInput {
     username: string;
     password: string;
-    // confirmedPassword: string;
     handleInputUsername : (input: any) => void;
     handleInputPassword : (input: any) => void;
     handleClick : () => void;
 }
 
-
-const formRegister = (props : IInput) => {
+const FormLogin = (props : IInput) => {
     return (
         <div>
     <Form>
-        <h1>Register</h1>
+        <h1>Login</h1>
         <>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -41,4 +39,4 @@ const formRegister = (props : IInput) => {
     );
 }
 
-export default formRegister;
+export  default FormLogin

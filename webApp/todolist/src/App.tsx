@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RegisterComponent from './Authentication/Register/register';
+import InitRoutes from "./Navigation/initRoute";
+
 function App() {
   return (
-     <RegisterComponent/>
+    <>
+    <InitRoutes/>
+    </>
   );
 }
 

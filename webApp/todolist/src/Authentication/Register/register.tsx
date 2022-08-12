@@ -1,7 +1,8 @@
 import React from 'react';
 import FormRegister from "./component/index";
 import RegisterController from "./register.controller";
-
+import History from "../../Navigation/historyNavigation";
+import AppRoutes from '../../Navigation/route';
 class RegisterComponent extends React.Component {
     state =  {
         username: '',
@@ -17,9 +18,13 @@ class RegisterComponent extends React.Component {
         this.setState({ password: input.target.value})
     }
 
-    handleClick = () => {
-        console.log(this.state.username, this.state.password);
-        RegisterController(this.state.username, this.state.password);
+    handleClick = async () => {
+        var response = await RegisterController(this.state.username, this.state.password);
+        if (response.status === 200) {
+            History.push(AppRoutes.Login)
+        } else {
+            alert(response.msg);
+        }
     }
 
     render() {
