@@ -22,4 +22,6 @@ jobs:
           script: |
             cd server
             npm i
+            cd ../webApp/todolist
+            npm i
 
