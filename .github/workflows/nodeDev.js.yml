@@ -16,7 +16,8 @@ jobs:
           node-version: "16.x"
         
       - name: install dependence
+        uses: actions/setup-node@v3
         script: |
           cd ./server/
           npm i
-           
+
