@@ -4,6 +4,8 @@ import Asset1 from '../../../Assets/Metrics-rafiki.svg';
 import Asset2 from '../../../Assets/Task-rafiki.svg';
 import styles from './style';
 import margin from '../../../styles/common';
+import { Link } from 'react-router-dom'
+
 interface IInput {
     username: string;
     password: string;
@@ -37,6 +39,11 @@ const FormLogin = (props : IInput) => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                <>
+                <div>
+                  <Link to="/Login">Already have an account ? Login.</Link>
+                </div>
+                </>
             <Button style={margin['10-mt']} variant="primary" onClick={props.handleClick}>
               Submit
             </Button>
