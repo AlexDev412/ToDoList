@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import {unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
 import History from './Navigation/historyNavigation';
+import './style.module.css';
 // import reportWebVitals from './reportWebVitals';
 
 
