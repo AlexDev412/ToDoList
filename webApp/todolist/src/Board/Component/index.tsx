@@ -1,6 +1,6 @@
 import styles from '../Component/style';
 
-const FormBord = (any : any) => {
+const FormBoard = (any : any) => {
     return (
         <div style={styles.Background}>
             <div style={styles.BoardBackground}>
@@ -10,4 +10,4 @@ const FormBord = (any : any) => {
     );
 }
 
-export default FormBord
+export default FormBoard
