@@ -1,6 +1,8 @@
 import React from "react";
 import FormLogin from "./component/index";
-
+import LoginController from "./login.controller";
+import History from "../../Navigation/historyNavigation";
+import AppRoutes from '../../Navigation/route';
 class LoginComponent extends React.Component{
     state = {
         username: '',
@@ -14,11 +16,17 @@ class LoginComponent extends React.Component{
     handleOnChangePassword = (input : any) => {
         this.setState({password: input.target.value});
     }
-
-    handleClick = () => {
-        console.log(this.state.username, this.state.password);
+    
+    handleClick = async () => {
+        let response = await LoginController(this.state.username, this.state.password);
+        console.log(response);
+        if (response.status === 200) {
+            History.push(AppRoutes.Board);
+        } else {
+            alert(response.msg);
+        }
     }
-
+    
     render() {
         return (
             <FormLogin
@@ -26,7 +34,7 @@ class LoginComponent extends React.Component{
                 password={this.state.password}
                 handleInputUsername={(input) => this.handleOnChangeUsername(input)}
                 handleInputPassword={(input) => this.handleOnChangePassword(input)}
-                handleClick={() => this.handleClick}
+                handleClick={() => this.handleClick()}
             />
         );
     }
