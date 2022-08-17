@@ -24,6 +24,8 @@ const styles = {
     BoardTodo: {
         backgroundColor:'rgb(235, 236, 240)',
         flexDirection: 'column',
+        display: 'flex',
+        alignItems: 'center',
         border: '1px',
         borderRadius: '3px',
         width: '500px',
@@ -33,6 +35,8 @@ const styles = {
     BoardProgress: {
         backgroundColor:'rgb(235, 236, 240)',
         flexDirection: 'column',
+        display: 'flex',
+        alignItems: 'center',
         border: '1px',
         borderRadius: '3px',
         width: '500px',
@@ -42,12 +46,20 @@ const styles = {
     BoardDone: {
         backgroundColor:'rgb(235, 236, 240)',
         flexDirection: 'column',
+        display: 'flex',
+        alignItems: 'center',
         border: '1px',
         borderRadius: '3px',
         width: '500px',
         height: '90vh',
         margin: '50px 0px 0px 0px',
     },
+    CardPlacement: {
+        backgroundColor: 'rgb(255, 255, 255)',
+        flexDirection: 'column',
+        height: '80vh',
+        width: '450px',
+    }
   } as const;
 
   export default styles;
