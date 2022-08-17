@@ -9,14 +9,17 @@ const FormBoard = (any : any) => {
                 <div style={padding['1O-pl']}></div>
                     <div style={styles.BoardTodo}>
                         <p>Todo</p>
+                        <div style={styles.CardPlacement}></div>
                     </div>
                     <div style={padding['1O-pr']}></div>
                     <div style={styles.BoardProgress}>
                         <p>In progress</p>
+                        <div style={styles.CardPlacement}></div>
                     </div>
                     <div style={padding['1O-pr']}></div>
                     <div style={styles.BoardDone}>
                         <p>Done</p>
+                        <div style={styles.CardPlacement}></div>
                     </div>
                 </div>
             </div>
